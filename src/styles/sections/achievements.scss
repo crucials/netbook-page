@@ -1,0 +1,133 @@
+@use '../ui-kit/colors' as *;
+
+.achievements {
+    padding: 70px 20px;
+    display: grid;
+    grid-template-columns: minmax(260px, 23%) minmax(260px, 23%) 5% minmax(290px, 25%);
+    column-gap: 20px;
+    row-gap: 35px;
+    justify-content: center;
+}
+
+.achievement-card {
+    padding: 32px;
+    background-color: white;
+    border: solid 1px rgba($light-grey, 0.2);
+    transition: box-shadow 0.3s, border-width 0.2s linear;
+    border-radius: 14px;
+
+    &:hover {
+        border-width: 0px;
+        box-shadow: 0px 26px 49px 0px #92A5B855;
+    }
+
+    .achievement-icon {
+        transition: scale 0.3s ease-in-out;
+    }
+
+    &:hover .achievement-icon {
+        scale: 1.3;
+    }
+}
+
+.achievement-title {
+    display: flex;
+    align-items: center;
+    column-gap: 9px;
+    color: $dark-blue;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: 28px;
+}
+
+.statistics {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    margin-bottom: 28px;
+}
+
+.three-users-avatars {
+    min-width: 70px;
+}
+
+.user-avatar {
+    display: inline-block;
+    margin-left: -38px;
+
+    &:first-child {
+        margin-left: -20px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.statistics-title {
+    display: block;
+    margin-bottom: 6px;
+    color: darken($light-grey, 15);
+    font-size: 1.15rem;
+}
+
+.highlighted-text {
+    color: $blue;
+    font-weight: 600;
+}
+
+.achievement-description {
+    margin-bottom: 25px;
+}
+
+.achievements-section-info {
+    grid-column: 4 / 5;
+}
+
+.achievements-section-heading-label {
+    margin-bottom: 10px;
+}
+
+.achievements-section-heading {
+    margin-bottom: 18px;
+}
+
+.achievements-section-description {
+    margin-bottom: 35px;
+}
+
+
+@media (min-width: 1750px) {
+    .achievement-title {
+        font-size: 1.5rem;
+
+        img {
+            width: 22px;
+        }
+    }
+
+    .statistics-title {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .achievements {
+        grid-template-columns: repeat(2, minmax(260px, 50%));
+    }
+
+    .achievements-section-info {
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+    }
+}
+
+@media (max-width: 570px) {
+    .achievements {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-card {
+        grid-column: 1 / 3;
+    }
+}

@@ -1,0 +1,55 @@
+@use './colors' as *;
+
+.section-heading-label {
+    display: block;
+    color: $blue;
+    font-weight: 500;
+    font-size: 1.13rem;
+}
+
+.section-heading {
+    color: $dark-blue;
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.section-description {
+    color: $light-grey;
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+.link {
+    font-weight: 500;
+    font-size: 1.1rem;
+
+    img {
+        vertical-align: middle;
+        width: 14px;
+        transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+
+    &:hover img {
+        transform: translateX(10px);
+    }
+}
+
+.blue-link {
+    @extend .link;
+    color: $blue;
+}
+
+.black-link {
+    @extend .link;
+    color: #4A4A56;
+}
+
+@media (min-width: 1750px) {
+    .section-description {
+        font-size: 1.35rem;
+    }
+
+    .link {
+        font-size: 1.35rem;
+    }
+}

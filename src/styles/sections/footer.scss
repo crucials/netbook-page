@@ -1,0 +1,169 @@
+@use '@/styles/ui-kit/colors' as *;
+
+.footer {
+    background-color: #2B2B39;
+}
+
+.main-footer-content {
+    padding: 70px 20px 0 20px;
+    display: grid;
+    grid-template-columns: minmax(300px, 41%) minmax(270px, 21%);
+    justify-content: space-around;
+    margin-bottom: 70px;
+}
+
+.footer-menu {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-menu-column {
+    flex-basis: max(14%, 100px);
+}
+
+.footer-heading {
+    font-weight: 500;
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 26px;
+}
+
+.footer-link {
+    font-weight: 400;
+    display: block;
+    margin-bottom: 23px;
+    color: #E7E7E7;
+    transition: color 0.3s;
+    font-size: 1rem;
+
+    &:hover {
+        color: white;
+        text-decoration: underline;
+    }
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.newsletter-description {
+    color: white;
+    margin-bottom: 32px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+}
+
+.email-field {
+    height: 50px;
+    min-width: 250px;
+    padding-left: 24px;
+    border: 1px solid #FFFFFF85;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.email-input {
+    width: 55%;
+    font-size: 0.9rem;
+    background-color: transparent;
+    font-weight: normal;
+    color: white;
+
+    &::placeholder {
+        color: #717179;
+    }
+}
+
+.subscribe-button {
+    border-radius: inherit;
+    height: 100%;
+    padding: 0 24px;
+    background-color: white;
+    color: $grey;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in, padding 0.2s;
+
+    &:hover {
+        background-color: hsl(0, 0%, 87%);
+    }
+
+    &:active {
+        padding: 0 30px;
+    }
+}
+
+.footer-bar {
+    padding: 31px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 35px;
+    background-color: #20202D;
+}
+
+.owner {
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+}
+
+.social-networks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+
+@media (min-width: 1750px) {
+    .footer-link, .newsletter-description {
+        font-size: 1.3rem;
+    }
+
+    .footer-heading {
+        font-size: 1.5rem;
+    }
+
+    .email-input {
+        font-size: 1.15rem;
+    }
+
+    .owner {
+        font-size: 1.03rem;
+    }
+}
+
+@media (max-width: 595px) {
+    .main-footer-content {
+        padding: 20px;
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+
+    .email-field {
+        width: 70%;
+    }
+
+    .footer-bar {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer-bar {
+        padding: 30px 10px;
+
+        & > * {
+            width: 100%;
+        }
+    }
+}

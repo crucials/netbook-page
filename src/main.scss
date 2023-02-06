@@ -1,0 +1,21 @@
+@use './styles/normalize';
+@use './styles/ui-kit/fonts';
+@use './styles/ui-kit/buttons';
+@use './styles/ui-kit/text';
+
+@use './styles/navigation';
+@use './styles/sections/hero';
+@use './styles/sections/features';
+@use './styles/sections/achievements';
+@use './styles/sections/functionality';
+@use './styles/sections/team';
+@use './styles/sections/app';
+@use './styles/sections/news';
+@use './styles/sections/footer';
+
+.header {
+    min-height: 100vh;
+    background: linear-gradient(311.76deg, #D4E7FE -15.24%, #FFFFFF 78.85%);
+    display: flex;
+    flex-direction: column;
+}

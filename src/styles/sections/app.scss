@@ -1,0 +1,60 @@
+.app {
+    display: grid;
+    grid-template-columns: minmax(235px, 23%);
+    background-image: url('@/assets/images/app-section-bg.png');
+    padding: 90px 160px;
+    background-repeat: no-repeat;
+    background-color: #E5F0FD;
+    background-position: 60% 13%;
+}
+
+.app-section-heading-label {
+    margin-bottom: 10px;
+}
+
+.app-section-heading {
+    margin-bottom: 18px;
+}
+
+.app-section-description {
+    margin-bottom: 37px;
+}
+
+.app-links {
+    display: flex;
+    column-gap: 17px;
+    row-gap: 23px;
+
+    a {
+        transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+        &:hover {
+            transform: scale(1.08);
+        }
+    }
+}
+
+
+@media (min-width: 1750px) {
+    .app {
+        background-position: 85% 15%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .app {
+        background-size: 100% 100%;
+    }
+
+    .app-links {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 800px) {
+    .app {
+        grid-template-columns: 1fr;
+        background-image: none;
+        padding: 90px 10px;
+    }
+}

@@ -1,0 +1,84 @@
+@use '../ui-kit/colors' as *;
+
+.functionality {
+    background: linear-gradient(0deg, rgba(241, 246, 253, 0) 1.63%, #F1F6FD 20.5%, 
+        #F1F6FD 58.57%, #FFFFFF 100%);
+    padding: 60px 20px 120px 20px;
+}
+
+.functionality-section-heading-label {
+    margin-bottom: 9px;
+}
+
+.functionality-section-heading {
+    margin-bottom: 19px;
+}
+
+.functionality-section-description {
+    width: 30%;
+    margin: 0 auto 50px auto;
+}
+
+.functionality-section-description, .functionality-section-heading, 
+.functionality-section-heading-label {
+    text-align: center;
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 32.6%));
+    gap: 44px;
+    justify-content: center;
+}
+
+.feature-card-item {
+    background-color: white;
+    border-radius: 14px;
+    padding: 44px 40px;
+    display: flex;
+    box-shadow: 14px 22px 52px -12px #7F7F7F28;
+    justify-content: flex-start;
+    column-gap: 10px;
+    align-items: flex-start;
+
+    transition: all 0.3s linear;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 14px 30px 52px -8px #7F7F7F38;
+    }
+}
+
+.feature-card-icon {
+    width: 80px;
+}
+
+.feature-card-heading {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #2F2C4A;
+    margin-bottom: 14px;
+}
+
+.feature-card-text {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    color: $light-grey;
+}
+
+
+@media (min-width: 1750px) {
+    .feature-card-heading {
+        font-size: 1.7rem;
+    }
+
+    .feature-card-text {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 730px) {
+    .feature-cards {
+        grid-template-columns: 1fr;
+    }
+}

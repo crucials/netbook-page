@@ -1,0 +1,66 @@
+@use './colors' as *;
+
+.filled-button {
+    background-color: $blue;
+    color: white;
+    font-weight: 400;
+    border-radius: 14px;
+    box-shadow: 0px 10px 22px -3px rgb($blue, 0.26);
+    transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+    &:hover {
+        box-shadow: 0px 5px 22px 2px rgb($blue, 0.4);
+    }
+
+    &:active {
+        background-color: lighten($blue, 10);
+    }
+}
+
+.medium-size-filled-button {
+    @extend .filled-button;
+    font-size: 0.95rem;
+    padding: 18px 44px;
+}
+
+.large-size-filled-button {
+    @extend .filled-button;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 24px 42px;
+}
+
+
+.outlined-button {
+    border-radius: 14px;
+    padding: 24px 42px;
+    color: $blue;
+    border: 1px solid #217BF4;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: scale 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s;
+
+    &:hover {
+        scale: 1.03;
+    }
+
+    &:active {
+        background-color: $blue;
+        color: white;
+    }
+}
+
+
+@media (min-width: 1800px) {
+    .medium-size-filled-button {
+        font-size: 1.3rem;
+    }
+
+    .large-size-filled-button {
+        font-size: 1.4rem;
+    }
+
+    .outlined-button {
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,123 @@
+@use '../ui-kit/colors' as *;
+
+.team {
+    padding: 80px 25px;
+    background-color: white;
+}
+
+.team-section-heading-label {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.team-section-heading {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.team-section-description {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.tab-buttons {
+    position: relative;
+    border-radius: 14px;
+    background-color: rgba($blue, 0.087);
+    padding: 8px;
+    margin: 0 auto;
+    width: fit-content;
+    margin-bottom: 44px;
+}
+
+.tab-button {
+    position: relative;
+    width: 150px;
+    height: 56px;
+    font-weight: 500;
+    font-size: 1rem;
+    color: $grey;
+    transition: color 0.3s;
+}
+
+.tab-button-selected {
+    color: white;
+}
+
+.current-tab-indicator {
+    background-color: $blue;
+    width: 150px;
+    height: 56px;
+    border-radius: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+    transition: left 0.25s ease-in;
+}
+
+.members-tab {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 21%));
+    justify-content: center;
+    align-items: start;
+}
+
+.tab-hidden {
+    display: none;
+}
+
+.member-card {
+    border-radius: 14px;
+    padding: 30px 52px;
+}
+
+.member-photo {
+    display: block;
+    width: 70%;
+    margin: 0 auto 27px auto;
+}
+
+.member-name {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: $dark-blue;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.member-username {
+    display: block;
+    font-weight: normal;
+    font-size: 1rem;
+    color: $light-grey;
+    text-align: center;
+}
+
+
+@media (min-width: 1750px) {
+    .tab-button {
+        font-size: 1.2rem;
+    }
+
+    .member-username {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .current-tab-indicator {
+        display: none;
+    }
+
+    .tab-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .tab-button-selected {
+        border-radius: 14px;
+        background-color: $blue;
+    }
+}
