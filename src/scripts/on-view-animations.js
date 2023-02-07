@@ -5,7 +5,14 @@ window.addEventListener('load', () => {
                 const viewedElement = entry.target
 
                 if(viewedElement.classList.contains('hero-illustration')) {
-                    viewedElement.querySelectorAll('.avatar').forEach(avatar => avatar.classList.add('avatar-animated'))
+                    let timeoutTime
+                    viewedElement.querySelectorAll('.avatar').forEach(avatar => {
+                        setTimeout(() => {
+                            avatar.classList.add('avatar-animated')
+                        }, timeoutTime)
+
+                        timeoutTime += 300
+                    })
                 }
                 else if(viewedElement.classList.contains('hero-heading')) {
                     viewedElement.classList.add('hero-heading-animated')

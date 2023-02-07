@@ -54,22 +54,14 @@
 
 .avatar {
     scale: 0;
-    transition: scale 0.4s 0s, transform 0.3s;
 
     &:hover {
         scale: 0.95;
     }
 }
 
-.avatar-2 {
-    transition: scale 0.4s 0.1s;
-}
-
-.avatar-3 {
-    transition: scale 0.4s 0.2s;
-}
-
 .avatar-animated {
+    transition: scale 0.4s;
     scale: 1;
 }
 
