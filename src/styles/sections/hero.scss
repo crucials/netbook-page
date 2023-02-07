@@ -29,11 +29,11 @@
 
     transform: translateX(-100px);
     opacity: 0;
-    transition: transform 0.7s cubic-bezier(0.215, 0.610, 0.355, 1), opacity 0.5s linear;
-    transition-delay: 0.3s;
 }
 
 .hero-heading-animated {
+    transition: transform 0.7s cubic-bezier(0.215, 0.610, 0.355, 1), opacity 0.5s linear;
+    transition-delay: 0.3s;
     transform: none;
     opacity: 1;
 }
