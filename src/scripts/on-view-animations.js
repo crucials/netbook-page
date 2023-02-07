@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
                 const viewedElement = entry.target
 
                 if(viewedElement.classList.contains('hero-illustration')) {
-                    let timeoutTime
+                    let timeoutTime = 0
                     viewedElement.querySelectorAll('.avatar').forEach(avatar => {
                         setTimeout(() => {
                             avatar.classList.add('avatar-animated')
