@@ -2,7 +2,7 @@
 
 Modern responsive website has animated tab selection, SVG animations :star: and advanced layout with CSS Grid.
 
-[View the page :eyes:](https://crucials.github.io/netbook-landing-page)
+[View the page :eyes:](https://crucials.github.io/netbook-page)
 
 Built with:
 
