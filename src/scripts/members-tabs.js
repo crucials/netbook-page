@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+    const tabButtonsContainer = document.querySelector('.tab-buttons')
     const tabButtons = document.querySelectorAll('.tab-button')
     const tabs = document.querySelectorAll('.members-tab')
     const currentTabIndicator = document.querySelector('.current-tab-indicator')
@@ -13,7 +14,7 @@ window.addEventListener('load', () => {
             button.classList.add('tab-button-selected')
             tabs[[...tabButtons].indexOf(button)].classList.remove('tab-hidden')
 
-            currentTabIndicator.style.left = button.getAttribute('data-indicator-position')
+            currentTabIndicator.style.left = button.offsetLeft + 'px'
         })
     })
 })
